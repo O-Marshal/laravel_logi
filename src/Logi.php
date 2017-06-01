@@ -64,11 +64,15 @@ class Logi
     /**
      * 登录记录
      */
-    function login($user_id, $token, $visit = false) {
+    function login($user_id, $token, $visit = false, $channel = null) {
+
+        $action = "auth";
+        if ($channel) $action .= ":" . $channel;
+
         if ($visit) {
-            return $this->action($user_id, 'auth', $user_id, 'check', '访问了系统', $token);
+            return $this->action($user_id, $action, $user_id, 'check', '访问了系统', $token);
         }
-        return $this->action($user_id, 'auth', $user_id, 'login', '登陆了系统', $token);
+        return $this->action($user_id, $action, $user_id, 'login', '登陆了系统', $token);
     }
 
     /**
