@@ -2,8 +2,8 @@
 
 namespace Ckryo\Laravel\Logi;
 
-use Ckryo\Laravel\Http\Models\LogiActionModel;
-use Ckryo\Laravel\Http\Models\LogiIpModel;
+use Ckryo\Laravel\Logi\Models\LogiActionModel;
+use Ckryo\Laravel\Logi\Models\LogiIpModel;
 
 class Logi
 {
